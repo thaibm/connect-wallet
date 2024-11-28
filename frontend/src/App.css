@@ -1,0 +1,163 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.container-wallet {
+  padding: 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.wallet-display {
+  margin-bottom: 15px;
+}
+
+.wallet-display h2 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.wallet-display p {
+  margin: 5px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 40px;
+}
+
+button:disabled {
+  background-color: #007bffa6;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[type='text'] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 12px;
+  margin-right: 10px;
+  width: 100px;
+}
+
+.action-button {
+  display: flex;
+  align-items: start;
+  margin-bottom: 10px;
+  gap: 10px;
+
+  a {
+    margin-bottom: 10px;
+  }
+}
+
+.title-button {
+  display: 'flex';
+  align-items: 'center';
+  gap: 5px;
+}
+
+.text-error {
+  color: red;
+  margin: '5px 0';
+  font-size: 14px;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.wrapper-amount-button {
+  margin-bottom: 10px;
+}
+
+.button-wrapper button {
+  width: fit-content;
+}
+
+.title-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transaction-hash {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.transaction-hash a,
+.wallet-display a {
+  color: #0784c3;
+  text-decoration: none;
+}
+
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  display: grid;
+  -webkit-mask: conic-gradient(from 15deg, #0000, #000);
+  animation: l26 1s infinite steps(12);
+}
+.loader,
+.loader:before,
+.loader:after {
+  background: radial-gradient(closest-side at 50% 12.5%, #363434 96%, #0000) 50%
+      0/20% 80% repeat-y,
+    radial-gradient(closest-side at 12.5% 50%, #524f4f 96%, #0000) 0 50%/80% 20%
+      repeat-x;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  grid-area: 1/1;
+  transform: rotate(30deg);
+}
+.loader:after {
+  transform: rotate(60deg);
+}
+
+@keyframes l26 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
